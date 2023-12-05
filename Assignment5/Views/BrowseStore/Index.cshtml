@@ -1,0 +1,22 @@
+﻿@*
+*@
+@{
+    ViewData["Title"] = "Index";
+}
+@using Assignment5.Models
+@model Genre
+
+<h2>Browse Music</h2>
+
+<p>Welcome to the browse music page</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.genreTitle)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+</table>
