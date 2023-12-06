@@ -23,6 +23,15 @@ namespace Assignment5.Controllers
             return View();
         }
 
+        public IActionResult Admin()
+        {
+            return View();
+        }
+
+        public IActionResult CreateButtonClick() {
+
+            return RedirectToAction("~/Views/Genres/Index.cshtml");
+        }
         
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

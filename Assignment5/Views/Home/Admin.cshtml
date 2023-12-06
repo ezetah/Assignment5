@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Admin";
+}
+
+<h3>Hello Administrator,</h3>
+
+<p>Select a button to Edit, Delte, Create entries in the database:</p>
+
+<form method="post" action="@Url.Action("Index", "Genres")">
+    <button type="submit" class="btn btn-primary">Genres</button>
+</form>
+<form method="post" action="@Url.Action("Index", "Songs")">
+    <button type="submit" class="btn btn-primary">Songs</button>
+</form>
+<form method="post" action="@Url.Action("Index", "Artists")">
+    <button type="submit" class="btn btn-primary">Artists</button>
+</form>
+<form method="post" action="@Url.Action("Index", "Users")">
+    <button type="submit" class="btn btn-primary">Users</button>
+</form>
