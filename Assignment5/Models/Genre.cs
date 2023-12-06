@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
 
 namespace Assignment5.Models
 {
@@ -6,6 +7,5 @@ namespace Assignment5.Models
     {
         public int Id { get; set; }
         public string? genreTitle { get; set; }
-
     }
 }
