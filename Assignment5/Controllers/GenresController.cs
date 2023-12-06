@@ -19,6 +19,13 @@ namespace Assignment5.Controllers
             _context = context;
         }
 
+        private void PopulateGenreDropDownList(object selectedGenre = null)
+        {
+            var genreQuery = from d in _context.Genre
+                                   orderby d.genreTitle
+                                   select d;
+            ViewBag.genreID = new SelectList(genreQuery.AsNoTracking(), "genreId", "genreTitle", selectedGenre);
+        }
 
         // GET: Genres
         public async Task<IActionResult> Index()
@@ -47,6 +54,7 @@ namespace Assignment5.Controllers
         // GET: Genres/Create
         public IActionResult Create()
         {
+            PopulateGenreDropDownList();
             return View();
         }
 
@@ -63,6 +71,7 @@ namespace Assignment5.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            PopulateGenreDropDownList(genre.Id);
             return View(genre);
         }
 
@@ -79,6 +88,8 @@ namespace Assignment5.Controllers
             {
                 return NotFound();
             }
+            PopulateGenreDropDownList(genre.Id);
+
             return View(genre);
         }
 
