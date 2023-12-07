@@ -1,0 +1,47 @@
+﻿@model Assignment5.Models.Song
+@{
+    ViewData["Title"] = "StoreDetails";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Song</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.genreID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.genreID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.artistID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.artistID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.songTitle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.songTitle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.artistTitle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.artistTitle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

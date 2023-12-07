@@ -25,6 +25,7 @@ namespace Assignment5.Controllers
             return View(await _context.Song.ToListAsync());
         }
 
+
         // GET: Songs/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -42,6 +43,8 @@ namespace Assignment5.Controllers
 
             return View(song);
         }
+        
+
 
         // GET: Songs/Create
         public IActionResult Create()

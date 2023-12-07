@@ -4,21 +4,35 @@
     ViewData["Title"] = "Index";
 }
 @using Assignment5.Models
-@model Genre
+@using Assignment5.Helpers
+@model IEnumerable<Song>
 
 <h2>Browse Music</h2>
 
-<p>Welcome to the browse music page</p>
 
+@using (Html.BeginForm("Index", "BrowseStore", FormMethod.Get))
+{
+    <p>
+        Genre: 
+        @Html.DropDownList("selectedGenre", ViewBag.GenreList as SelectList, "All Genres", new { onchange = "this.form.submit();" })
+        Artist: 
+        @Html.DropDownList("selectedArtist", ViewBag.ArtistList as SelectList, "All Artists", new { onchange = "this.form.submit();" })
+    </p>
+}
 
+@{
+    var gridColumns = new List<GridColumn<Song>>
+    {
+        new GridColumn<Song> { Name = "Title", Header = "Title", ValueExpression = s => s.songTitle },
+        new GridColumn<Song> { Name = "Artist", Header = "Artist", ValueExpression = s => s.artistTitle }
+    };
+}
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.genreTitle)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-</table>
+@if (Model != null && Model.Any())
+{
+    @Html.GridView(Model, gridColumns)
+}
+else
+{
+    <p>No songs found.</p>
+}
