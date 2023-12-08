@@ -72,7 +72,7 @@ namespace Assignment5.Controllers
                 return RedirectToAction(nameof(Index));
             }
             PopulateGenreDropDownList(genre.Id);
-            return View(genre);
+            return View();
         }
 
         // GET: Genres/Edit/5

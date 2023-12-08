@@ -17,7 +17,7 @@ namespace Assignment5.Models
         public string? artistTitle { get; set; }
         public decimal price { get; set; }
 
-        public Genre Genre { get; set; } //nav for related genre
+        public Genre? Genre { get; set; } //nav for related genre
 
     }
 }

@@ -7,17 +7,17 @@
 <h1>Details</h1>
 
 <div>
-    <h4>User</h4>
+    <h4>@Html.DisplayFor(model => model.Username)</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Username)
+            Username:
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Username)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Password)
+            Password:
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Password)
@@ -25,6 +25,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.userID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.userID">Edit</a> |
+    <a class="btn btn-primary" asp-action="Index">Back to List</a>
 </div>
