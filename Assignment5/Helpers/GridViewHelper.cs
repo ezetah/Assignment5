@@ -23,7 +23,7 @@
         public static IHtmlContent GridView<TModel>(this IHtmlHelper<IEnumerable<TModel>> htmlHelper, IEnumerable<TModel> data, IEnumerable<GridColumn<TModel>> columns)
         {
             var table = new TagBuilder("table");
-            table.AddCssClass("table");
+            table.AddCssClass("table table-striped table-bordered");
 
             var thead = new TagBuilder("thead");
             var tbody = new TagBuilder("tbody");

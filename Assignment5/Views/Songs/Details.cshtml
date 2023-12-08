@@ -7,35 +7,35 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Song</h4>
+    <h4>@Html.DisplayFor(model => model.songTitle)</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.genreID)
+            Genre ID: 
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.genreID)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.artistID)
+           Artist ID:
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.artistID)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.songTitle)
+            Song Title:
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.songTitle)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.artistTitle)
+            Artist Title:
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.artistTitle)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.price)
+            Song Price:
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.price)
@@ -43,6 +43,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.songID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.songID">Edit</a>
+    <a class="btn btn-primary" asp-action="Index">Back to List</a>
 </div>

@@ -9,15 +9,27 @@
 
 <p>Select a button to Edit, Delte, Create entries in the database:</p>
 
-<form method="post" action="@Url.Action("Index", "Genres")">
-    <button type="submit" class="btn btn-primary">Genres</button>
-</form>
-<form method="post" action="@Url.Action("Index", "Songs")">
-    <button type="submit" class="btn btn-primary">Songs</button>
-</form>
-<form method="post" action="@Url.Action("Index", "Artists")">
-    <button type="submit" class="btn btn-primary">Artists</button>
-</form>
-<form method="post" action="@Url.Action("Index", "Users")">
-    <button type="submit" class="btn btn-primary">Users</button>
-</form>
+<table>
+    <tr>
+        <td>
+            <form method="post" action="@Url.Action("Index", "Genres")">
+                <button type="submit" class="btn btn-primary">Genres</button>
+            </form>
+        </td>
+        <td>
+            <form method="post" action="@Url.Action("Index", "Songs")">
+                <button type="submit" class="btn btn-primary">Songs</button>
+            </form>
+        </td>
+        <td>
+            <form method="post" action="@Url.Action("Index", "Artists")">
+                <button type="submit" class="btn btn-primary">Artists</button>
+            </form>
+        </td>
+        <td>
+            <form method="post" action="@Url.Action("Index", "Users")">
+                <button type="submit" class="btn btn-primary">Users</button>
+            </form>
+        </td>
+    </tr>
+</table>

@@ -1,24 +1,23 @@
 ﻿@model IEnumerable<Assignment5.Models.Artist>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Artists Admin";
 }
 
-<h1>Index</h1>
+<h1>Artist Admin</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+
+<table class="table table-striped table-bordered">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.genreID)
+                Genre ID
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.artistTitle)
+                Artist Name
+            </th><th>
+                Actions
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -39,3 +38,6 @@
 }
     </tbody>
 </table>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
